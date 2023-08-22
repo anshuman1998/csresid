@@ -18,7 +18,7 @@ An example call for the full code would be as the following:
 ## Method 1: Using fake_pha() to generate simulated data.
 ```pct_CuSum,pval_area = CuSumRes(outdir='/path/to/where/you/want/to/save/your/file',outroot='test1_',domcmc=False,Emin=0.4,Emax=7.0,nsim=300, figsize=(10,6),lw=2.5,modellabel='Model',boundscolor='black',modelcolor='tab:red',histcolor='tab:green',bins =30,figformat='pdf')```
 ## Method 2: Using get_draws() to generate best-fit parameters.
- pct_CuSum,pval_area = ```CuSumRes(outdir='/path/to/where/you/want/to/save/your/file',outroot='test2_',domcmc=True,Emin=0.4,Emax=7.0,nsim=300,n_burn=3000,get_draws_niter=7000, figsize=(10,6),lw=2.5,modellabel='Model',boundscolor='black',modelcolor='tab:red',histcolor='tab:green',bins =30,figformat='pdf')```
+ ```pct_CuSum,pval_area = CuSumRes(outdir='/path/to/where/you/want/to/save/your/file',outroot='test2_',domcmc=True,Emin=0.4,Emax=7.0,nsim=300,n_burn=3000,get_draws_niter=7000, figsize=(10,6),lw=2.5,modellabel='Model',boundscolor='black',modelcolor='tab:red',histcolor='tab:green',bins =30,figformat='pdf')```
 #
 call ```help()``` to get details of the different variables
 #
