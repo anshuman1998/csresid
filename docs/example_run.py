@@ -45,7 +45,7 @@ ui.thaw(t1.N,t1.O,t1.Ne,t1.Fe)
 for i in range(5):
     ui.fit()
 
-#Now we use the full code csresid.py to generate plot panels of the second and third columns from the Research Note
+#Now we use the full code csresid.py to generate plots from the bottom row of Figure 12 of Acharya et al. 2023
 import csresid as csr
 
 pct_cusum,pval = csr.CuSumRes(outdir=cwd,outroot='',domcmc=False,n_burn=3000,get_draws_niter=7000,nsim=300, 
