@@ -7,6 +7,11 @@ Using fake_pha, we can generate a mock dataset, run fit() on it to obtain residu
 Sample best-fits from MCMC iterations obtained by running pyBloCXS called via get_draws. The residuals between these best-fits and observational data is then used. Once we have a set of simulated residuals, we plot their cumulative sum versus energy, and find their 5-95th percentile range. Then we compare the cumulative sum of residuals of our obtained best-fit on the real data with this. Ideally, ~10% points of this curve would lie beyond the 5-95th percentile range. We calculate this number and report it along with the plot. Secondly, we note the distance by which they go beyond the 5-95th percentile range. We call the sum of these lengths as the excess area. We calculate this for all the simulated residuals to obtain a histogram. We also calculate this for the best-fit on the observational data.
 #The p-value of excess area should be >0.05 as the best fit to the real data should not be any different from the best fit to simulated data.
 
+## data folder
+We provide an example Chandra dataset of ObsID 6122 of HD 179949, as used in Acharya et al. 2023. The ARF and RMF files are also provided
+## docs folder
+We provide an example script of running the Model 2v option from Acharya et al. 2023 on the data provided. This generates the plots in the bottom row of Figure 12 from the paper.
+#
 ## In this code, the function CuSumRes() is the master control, which calls all other functions.
 In gensim(), you can choose whether you want to use MCMC draws for generating simulations using get_draws(), or if you want to just use fake_pha() to generate simulations.
 If you choose to run MCMC, mcmcsims() will call diagnosticplot_maker(), that plots the behaviour of parameters and stats versus iterations.
@@ -46,7 +51,7 @@ call ```help()``` to get details of the different variables
    (vi): excessarea_for_CuSum: same as Method 1.
 
 
-Anshuman Acharya (January 2022)
+Anshuman Acharya (September 2023)
 
 v1.0
 #
